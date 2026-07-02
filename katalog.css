@@ -770,4 +770,87 @@ body {
   .catalog-section.horizontal-style { 
     padding: 30px 16px 80px 16px; 
   }
+
+  /* ==========================================================================
+   KONAČAN POPRAVAK ZA EKSTREMNO USKE MOBITELE (360px i manje) - KATALOG
+   ========================================================================== */
+@media (max-width: 360px) {
+  /* Osiguravamo da cijela kartica i njezine sekcije ne prelaze širinu ekrana */
+  .catalog-section.horizontal-style {
+    padding: 30px 8px 60px 8px !important; /* Maksimalno širimo prostor oko kartice */
+  }
+
+  .product-row-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 2rem 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Tehnički podaci (Mreža 2x2) */
+  .row-card-specs-box {
+    padding: 20px 12px 15px 12px !important; /* Smanjen padding da tekst ne bježi */
+    box-sizing: border-box !important;
+  }
+
+  .row-card-specs-box h2 {
+    font-size: 22px !important; /* Malo manji naslov modela */
+    margin-bottom: 15px !important;
+  }
+
+  .row-specs-grid {
+    gap: 12px 8px !important; /* Uži razmaci između specifikacija */
+    padding: 12px 0 !important;
+  }
+
+  .spec-item strong {
+    font-size: 9px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .spec-item span {
+    font-size: 12px !important;
+  }
+
+  /* POPRAVAK ZA DONJI DIO: Cijena i Gumb više ne idu lijevo-desno, nego jedan ispod drugog */
+  .row-card-action-box {
+    padding: 0 12px 25px 12px !important; /* Smanjen bočni razmak */
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .row-card-action-box .action-box-inner,
+  .row-card-action-box .action-box-inner > div:first-child {
+    display: flex !important;
+    flex-direction: column !important; /* Prebacuje cijenu iznad gumba */
+    align-items: center !important;   /* Centrira ih savršeno na sredinu kartice */
+    text-align: center !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  /* Prilagodba cijene */
+  .price-label {
+    font-size: 9px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .product-price {
+    font-size: 15px !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Prilagodba gumba da lijepo sjedne na dno */
+  .row-card-action-box .product-btn {
+    width: 100% !important;       /* Gumb se sada širi cijelom širinom kartice */
+    max-width: 100% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    padding: 12px 0 !important;   /* Dobar padding za dodir prsta */
+    box-sizing: border-box !important;
+  }
+}
+
 }

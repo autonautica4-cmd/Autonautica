@@ -1109,4 +1109,124 @@ button {
     bottom: -2rem;
     left: 0;
   }
+
+  /* ==========================================================================
+   10. SPECIFIČNA OPTIMIZACIJA ZA EKSTREMNO USKE EKRANE (360px i manje)
+   ========================================================================== */
+@media (max-width: 360px) {
+  html {
+    font-size: 14px; /* Smanjuje globalnu bazu za rem jedinice radi lakšeg skaliranja */
+  }
+
+  /* Naslovi i sekcije */
+  .section-title {
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-section,
+  .categories-section,
+  .blog-section,
+  .home-inquiry-section {
+    padding: 4rem 1rem; /* Smanjen padding da ostane više mjesta za sadržaj */
+  }
+
+  /* Hero Sekcija */
+  .hero-content h1 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-btn {
+    padding: 1rem 2rem;
+    width: 100%; /* Gumb se širi preko cijelog ekrana radi lakšeg dodira */
+    text-align: center;
+  }
+
+  /* O Nama Mozaik i Bedževi */
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .main-img {
+    height: 220px; /* Dodatno smanjena visina slike */
+  }
+
+  .floating-badge {
+    position: relative; /* Pretvaramo ih u normalan blok da ne smetaju slici */
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Kategorije i Blog */
+  .card-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .blog-card {
+    padding: 1rem;
+  }
+
+  .blog-img-box {
+    height: 200px;
+  }
+
+  /* Kontakt Forma */
+  .inquiry-text-block h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info-text {
+    padding-left: 1rem;
+  }
+
+  .inquiry-form input,
+  .inquiry-form textarea {
+    padding: 1rem;
+  }
+
+  .inquiry-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 360px) {
+  /* Razmak od rubova ekrana za cijelu navigacijsku traku */
+  .nav-container {
+    padding: 1rem 1.25rem !important; /* Odmiče logo i hamburger od rubova */
+    gap: 1rem;
+  }
+
+  /* Smanjivanje visine logotipa radi boljeg balansa */
+  .logo img {
+    height: 25px !important; /* Smanjeno s 35px na 25px */
+    width: auto;
+  }
+
+  /* Prilagodba hamburger izbornika za manji ekran */
+  .hamburger {
+    width: 22px; /* Malo uži hamburger */
+    height: 16px;
+    margin-right: 0.25rem; /* Dodatni mali odmak od samog desnog ruba */
+  }
+}
+
+}
+
 }
